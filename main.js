@@ -8,6 +8,8 @@ const overlay = document.querySelector(".overlay");
 const link = document.querySelectorAll(".link");
 const input = document.querySelector("#address");
 const copyBtn = document.querySelector(".copy-btn");
+const loader = document.querySelector(".loader");
+
 
 let lastScroll = 0;
 
@@ -21,6 +23,10 @@ window.addEventListener("scroll", () => {
 
     lastScroll = window.scrollY;
 });
+
+window.addEventListener("load", ()=>{
+    loader.style.display = 'none';
+})
 
 toggle.addEventListener("click", () => {
     toggleBar.classList.toggle("active");

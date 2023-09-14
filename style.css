@@ -457,6 +457,51 @@ footer {
     font-size: 20px;
 }
 
+/* Page Loading effect */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fefefe;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.loader-box .circle {
+    height: 45px;
+    width: 45px;
+    border: 4px solid #000080;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-radius: 50%;
+    animation: load .5s ease infinite forwards;
+}
+
+@keyframes load {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.loader-box h2{
+    color: #000080;
+}
+
+.image img{
+    height: 60px;
+}
+
 @media (max-width:768px) {
     .hero-container {
         background-position: 70%;
